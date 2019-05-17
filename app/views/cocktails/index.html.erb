@@ -1,8 +1,45 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
 
- <% @cocktails.each do |cocktail| %>
-     <%= cocktail.id%>
-     <%= cocktail.name%>
-      <%= link_to "see more" , cocktail_path(cocktail)  %>
- <% end %>
+
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "_cocktails.jpg" %>);">
+  <div class="container">
+    <h1>Welcome to the cocktail club 😎 </h1>
+    <p>Change your life and learn cocktail making at one of our campuses around the world.</p>
+    <%= link_to "Build a Cocktail", new_cocktail_path, class: "btn btn-flat btn-primary" %>
+  </div>
+</div>
+
+
+    <div class="card-product d-flex justify-content-between">
+        <% @cocktails.each do |cocktail| %>
+        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?w968">
+        <div class="card-product-infos">
+          <h2><%= cocktail.name%> </h2>
+          <p> <strong><%= link_to "see more" , cocktail_path(cocktail) %></strong></p>
+        </div>
+          <% end %>
+    </div>
+
+</div>
+
+
+<!--
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Breakfast
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Lunch
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Dinner
+  </div>
+</div> -->
+
+
+
+
